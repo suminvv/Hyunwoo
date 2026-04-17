@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>현우의 랜덤 어록!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Malgun Gothic", sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 700px;
+      max-width: 90%;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #222;
+      margin-bottom: 25px;
+    }
+
+    #quoteBox {
+      min-height: 120px;
+      font-size: 24px;
+      line-height: 1.7;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border-radius: 16px;
+      background: #f6f6f6;
+      margin-bottom: 25px;
+    }
+
+    button {
+      border: none;
+      background: #4b3f72;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>현우의 오늘 어록</h1>
+    <div id="quoteBox">버튼을 눌러 문장을 확인하세요.</div>
+    <button onclick="showRandomQuote()">어록 보기</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "그래픽 필요없지 않아요?",
+      "제가 그래픽은 신경쓰지 않아서요.",
+      "이현우 인간관계론 필독",
+      "부피가 너무 크신 거 같아요.",
+      "체리 보이?",
+      "나에게 당신의 목숨은 가치가 없어요.",
+      "걍 죽어",
+      "지은님 목숨은 가치가 없어. 죽으면 그냥 유기체 덩어리니까 살면서 갑아.",
+      "부모님께서 밥 해주실 여력이 안 되시나요?",
+      "배고프세요? 물을 마시세요.",
+      "인간은 호르몬으로 움직인다.",
+      "사람은 죽으면 유기물 덩어리가 된다.",
+      "인간은 흥미로운 학습 거리입니다.",
+      "교수님이 생각보다 멍청하네.",
+      "두꺼비는 없으니까 야미로 막아버리죠."
+    ];
+
+    function showRandomQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quoteBox").textContent = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
